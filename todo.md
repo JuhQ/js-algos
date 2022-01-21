@@ -8,6 +8,7 @@ Data structures:
 
 Algorithms:
 
+- binary search
 - breadth-first search
 - depth-first search
 - quicksort
@@ -68,3 +69,5 @@ Hash table:
 - size
 - Missing:
   - hashing
+
+Binary search, recursive
