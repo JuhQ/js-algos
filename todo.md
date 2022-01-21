@@ -53,6 +53,8 @@ Linked list:
 - indexOf
 - TODO:
   - remove
+  - removeFirst
+  - removeLast
   - addBefore
   - addAfter
   - set
