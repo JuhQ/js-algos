@@ -58,3 +58,13 @@ Linked list:
   - addBefore
   - addAfter
   - set
+
+Hash table:
+
+- set
+- get
+- remove
+- valueOf
+- size
+- Missing:
+  - hashing
