@@ -1,13 +1,16 @@
+/* eslint-disable no-plusplus */
 interface ValueOf<T> {
   data: T | undefined;
   next: ValueOf<T> | null;
 }
 
 type Data<T> = T | undefined;
+// eslint-disable-next-line no-use-before-define
 type Next<T> = LinkedList<T> | null;
 
 class LinkedList<T> {
   private data: Data<T> = undefined;
+
   private nextValue: Next<T> = null;
 
   public current(): LinkedList<T> {
@@ -23,7 +26,7 @@ class LinkedList<T> {
   }
 
   public contains(value: T): boolean {
-    let list: LinkedList<T> = this;
+    let list: LinkedList<T> = this.current();
 
     while (list.next()) {
       if (list.value() === value) {
@@ -45,14 +48,12 @@ class LinkedList<T> {
   public add(value: T): void {
     if (this.data === undefined) {
       this.data = value;
+    } else if (this.nextValue === null) {
+      const data = new LinkedList<T>();
+      data.add(value);
+      this.nextValue = data;
     } else {
-      if (this.nextValue === null) {
-        const data = new LinkedList<T>();
-        data.add(value);
-        this.nextValue = data;
-      } else {
-        this.nextValue.add(value);
-      }
+      this.nextValue.add(value);
     }
   }
 
@@ -63,7 +64,7 @@ class LinkedList<T> {
       const linkedList = new LinkedList<T>();
       linkedList.add(value);
 
-      let list: LinkedList<T> = this;
+      let list: LinkedList<T> = this.current();
       while (list !== null) {
         linkedList.add(list.value());
         list = list.next();
@@ -90,7 +91,7 @@ class LinkedList<T> {
   }
 
   public getLast(): T {
-    let list: LinkedList<T> = this;
+    let list: LinkedList<T> = this.current();
 
     while (list.next()) {
       list = list.next();
@@ -101,7 +102,7 @@ class LinkedList<T> {
 
   public indexOf(value: T): number {
     let index = 0;
-    let list: LinkedList<T> = this;
+    let list: LinkedList<T> = this.current();
     let found = false;
 
     while (list.next()) {
@@ -126,7 +127,7 @@ class LinkedList<T> {
     }
 
     let size = 1;
-    let list: LinkedList<T> = this;
+    let list: LinkedList<T> = this.current();
 
     while (list.next()) {
       list = list.next();
