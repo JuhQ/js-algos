@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "EditorConfig.EditorConfig",
+    "amatiasq.sort-imports",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "humao.rest-client",
+    "kisstkondoros.vscode-codemetrics",
+    "shardulm94.trailing-spaces",
+    "wix.vscode-import-cost"
+  ]
+}

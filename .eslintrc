@@ -1,0 +1,44 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:compat/recommended",
+    "plugin:sonarjs/recommended"
+  ],
+  "plugins": [
+    "jest",
+    "@typescript-eslint",
+    "sonarjs",
+    "json-format",
+    "no-secrets"
+  ],
+  "env": {
+    "jest/globals": true,
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "json/sort-package-json": "standard"
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "tsx": "never",
+        "ts": "never"
+      }
+    ],
+    // tests might have identical functions, they are ok
+    "sonarjs/no-identical-functions": "off"
+  }
+}
