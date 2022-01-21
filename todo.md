@@ -27,3 +27,8 @@ Array:
 - remove
 - pop
 - shift
+
+Stack:
+
+- push
+- pop
