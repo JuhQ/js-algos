@@ -37,3 +37,22 @@ Queue
 
 - enqueue
 - dequeue
+
+Linked list:
+
+- add
+- addFirst
+- addLinkedList
+- current
+- value
+- next
+- contains
+- valueOf
+- getFirst
+- getLast
+- indexOf
+- TODO:
+  - remove
+  - addBefore
+  - addAfter
+  - set
