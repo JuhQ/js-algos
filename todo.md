@@ -32,3 +32,8 @@ Stack:
 
 - push
 - pop
+
+Queue
+
+- enqueue
+- dequeue
