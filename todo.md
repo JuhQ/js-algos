@@ -1,4 +1,5 @@
 Data structures:
+
 - arrays
 - stacks
 - queues
@@ -6,8 +7,23 @@ Data structures:
 - hash tables
 
 Algorithms:
+
 - breadth-first search
 - depth-first search
 - quicksort
 - mergesort
 - divide and conquer
+
+---
+
+Implementations:
+
+Array:
+
+- push
+- valueOf
+- get
+- set
+- remove
+- pop
+- shift
