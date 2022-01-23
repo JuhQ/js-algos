@@ -5,6 +5,9 @@ Data structures:
 - queues
 - linked lists
 - hash tables
+- graph
+- heap
+- binary search tree
 
 Algorithms:
 
