@@ -74,3 +74,14 @@ Hash table:
   - hashing
 
 Binary search, recursive
+
+Graph
+
+- vertexLength
+- edgeLength
+- addVertex
+- addEdge
+- removeVertex
+- removeEdge
+- containsVertex
+- containsEdge

@@ -36,6 +36,32 @@ class Graph<T> {
     this.addVertex(b);
     this.adjacent.get(b).add(a);
   }
+
+  public removeVertex(vertex: T): void {
+    this.adjacent.delete(vertex);
+
+    this.adjacent.forEach((value) => {
+      value.delete(vertex);
+    });
+
+    this.vertices.delete(vertex);
+  }
+
+  public removeEdge(a: T, b: T): void {
+    this.adjacent.get(a).delete(b);
+    this.adjacent.get(b).delete(a);
+  }
+
+  public containsVertex(vertex: T): boolean {
+    return this.vertices.has(vertex);
+  }
+
+  public containsEdge(a: T, b: T): boolean {
+    const edgeFromAtoB = this.adjacent.get(a)?.has(b);
+    const edgeFromBtoA = this.adjacent.get(b)?.has(a);
+
+    return edgeFromAtoB || edgeFromBtoA || false;
+  }
 }
 
 export default Graph;
