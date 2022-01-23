@@ -22,7 +22,7 @@ Algorithms:
 
 Implementations:
 
-Array:
+[Array](./src/array.ts):
 
 - push
 - valueOf
@@ -32,17 +32,17 @@ Array:
 - pop
 - shift
 
-Stack:
+[Stack](./src/stack.ts):
 
 - push
 - pop
 
-Queue
+[Queue](./src/queue.ts):
 
 - enqueue
 - dequeue
 
-Linked list:
+[Linked list](./src/linkedlist.ts):
 
 - add
 - addFirst
@@ -63,7 +63,7 @@ Linked list:
   - addAfter
   - set
 
-Hash table:
+[Hash table](./src/hashtable.ts):
 
 - set
 - get
@@ -73,9 +73,9 @@ Hash table:
 - Missing:
   - hashing
 
-Binary search, recursive
+[Binary search, recursive](./src/binarysearch.ts)
 
-Graph
+[Graph](./src/graph.ts):
 
 - vertexLength
 - edgeLength
